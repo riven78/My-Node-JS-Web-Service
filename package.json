@@ -1,0 +1,8 @@
+{
+  "name": "mynodejswebservice",
+  "version": "1.0.0",
+  "dependencies": {
+    "gps2citybybaidu": "^1.0.1",
+    "shutdownpc": "^1.0.0"
+  }
+}
