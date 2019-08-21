@@ -2,12 +2,13 @@ const gps2city = require("gps2citybybaidu");
 const shutdown = require("shutdownpc");
 const http = require("http");
 const fs = require("fs");
-
+const URL = require("url");
+const PATH = require("path")
 http.createServer(function (req, res) {
-  var pathname = url.parse(req.url).pathname;
+  const pathname = URL.parse(req.url).pathname;
   console.log(pathname);
-  console.log(path.basename(pathname));
-  if (path.basename(pathname) == "" || path.basename(pathname) == null) {
+  console.log(PATH.basename(pathname));
+  if (PATH.basename(pathname) == "" || PATH.basename(pathname) == null) {
     res.writeHead(200, {"Content-Type": "text/html;charset=utf-8"});
     fs.readFile("index.html", function (err, data) {
       if (err) {
